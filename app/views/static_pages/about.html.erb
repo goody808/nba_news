@@ -2,7 +2,11 @@
 
 <h1><%=yield(:text)%></h1>
 <p>
-The All NBA Headlines App consolidates 5 RSS feeds with NBA Fantasy Headlines. Let this be your deadliest news advantage. The current feeds are:
+
+Here it is!  About 10 hours straight. I think I'll go to bed soon. <br>
+
+The All NBA Headlines App consolidates 5 RSS feeds with NBA Fantasy Headlines. Let this be your deadliest news advantage. The current feeds are:<br>
+	
 	<ul>
 		<li>http://feeds.cbssports.com/cbssportsline/nba_news</li>
 		<li>http://www.nba.com/rss/nba_rss.xml</li>
@@ -10,4 +14,29 @@ The All NBA Headlines App consolidates 5 RSS feeds with NBA Fantasy Headlines. L
 		<li>http://rss.cnn.com/rss/si_nba.rss</li>
 		<li>http://sports.espn.go.com/espn/rss/nba/news</li>
 	</ul>
+
+-----------------------------------------------------------<br>
+https://github.com/goody808/sample_app<br><br>
+
+I didn't exactly follow instructions but I think all the specs are met.  Let me know if I missed something.<br><br> 
+
+The specs were to pull NBA Fantasy News from multiple content providers and display it descending order by publication date time. Specifically RSS Feeds were mentioned. The APIs looked bulky and since we were not filtering by league or user data, RSS Feeds were used instead.<br><br>
+
+Rather than parsing everything and rendering it, like we talked about, I created a db and a table for the headlines.  It can be implemented the other way but this seemed to function and was probably less work.<br><br>
+
+The home page consolidates 5 different rss feeds (see the About page) and displays the most recent ones descending by publication time. A method is called in the controller that updates the stories when rendering the home page.  I hoped to have a  background process but my attempted failed -  that will require a bit more work. <br><br>
+
+A function should be added to trim the db too, since it will grow without bounds currently.<br><br>
+
+The date formatting can be improved.<br><br>
+
+Resources and code I used: <br>
+The handy gem Feedzirra handles the feed parsing. https://github.com/pauldix/feedzirra<br><br>
+
+I had consulted http://ruby.railstutorial.org/ which helped with the set up, git, and heroku.<br><br>
+
+And http://ruby-doc.org/<br><br>
+
+Goody<br>
+203.927.9300
 </p>
