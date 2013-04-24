@@ -1,0 +1,14 @@
+<div class = "center hero-unit"> 
+	<h1>NBA Fantasy News</h1>
+	  <h4>recent stories</h4>
+	  <div id="rss">
+	  <ul>
+	  <% for entry in FeedEntry.all(:limit => 30, :order => "published_at desc") %>
+	    <li>
+	    	<%= link_to h(entry.name), entry.url %>
+				<%= entry.published_at.asctime %>
+	    </li>
+	  <% end %>
+	  </ul>
+	</div>
+</div>

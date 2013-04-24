@@ -1,12 +1,19 @@
 SampleApp::Application.routes.draw do
 
-  root :to => 'static_pages#home'  
+  get "feeds/index"
+
+  get "new_posts/index"
+
+  get "posts/new"
+
+  root :to => 'feed_entrys#index'  
 
   match '/signup', to: 'users#new'
   
   match '/help', to: 'static_pages#help'
   match '/about', to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+  #match '/nbafeed', to: 'feed_entrys#index'
 
   
   # The priority is based upon order of creation:
